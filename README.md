@@ -13,7 +13,11 @@ status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegJHU?bra
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegJHU/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegJHU?branch=master)
 <!-- badges: end -->
 
-The goal of ggsegJHU is to …
+Contains data for ggseg and ggseg3d for the JHU white matter
+segmentation.
+
+Hua et al. (2008) NeuroImage, 39(1):336-347
+[pubmed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724595/)
 
 ## Installation
 
