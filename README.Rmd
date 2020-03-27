@@ -1,0 +1,88 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.width = 6,
+  out.width = "100%"
+)
+devtools::load_all(".")
+```
+
+# ggsegJHU
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/LCBC-UiO/ggsegJHU.svg?branch=master)](https://travis-ci.org/LCBC-UiO/ggsegJHU)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegJHU?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegJHU)
+[![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegJHU/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegJHU?branch=master)
+<!-- badges: end -->
+
+The goal of ggsegJHU is to ...
+
+## Installation
+
+You can install the released version of ggsegJHU from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("ggsegJHU")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("LCBC-UiO/ggsegJHU")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+```{r}
+library(ggsegJHU)
+```
+
+```{r, fig.height=6}
+library(ggseg)
+
+ggseg(atlas = jhu, mapping = aes(fill = region)) +
+  scale_fill_brain("jhu", package = "ggsegJHU") +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7)) +
+  guides(fill = guide_legend(ncol = 2))
+
+```
+
+```{r "noneval", eval=FALSE}
+library(ggseg3d)
+
+ggseg3d(atlas = jhu_3d) %>% 
+  add_glassbrain("left") %>% 
+  pan_camera("right lateral")
+```
+
+```{r "orca", include=FALSE}
+library(ggseg3d)
+
+p <- ggseg3d(atlas = jhu_3d) %>%
+  add_glassbrain("left") %>% 
+  pan_camera("right lateral") %>%
+  plotly::add_annotations( text="Screen capture",
+                  legendtitle=TRUE, showarrow=FALSE,
+                  font = list(color = "#000000b4",
+                              family = 'sans serif',
+                              size = 50))
+plotly::orca(p, "man/figures/README-3d-plot.png")
+```
+
+```{r "incl", echo=FALSE}
+knitr::include_graphics("man/figures/README-3d-plot.png")
+```
+
+Please note that the 'ggsegJHU' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
