@@ -6,7 +6,7 @@ test_that("Check that ggseg:::adapt_scales is working", {
 
 context("test-palettes")
 test_that("check new palettes work", {
-  expect_equal(length(brain_pal("jhu", package = "ggsegJHU")), 20)
+  expect_equal(length(brain_pal("jhu", package = "ggsegJHU")), 11)
 
   expect_error(brain_pal("jhu"), "not a valid")
 
