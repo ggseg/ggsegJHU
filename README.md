@@ -16,7 +16,7 @@ coverage](https://codecov.io/gh/LCBC-UiO/ggsegJHU/branch/master/graph/badge.svg)
 Contains data for ggseg and ggseg3d for the JHU white matter
 segmentation.
 
-Hua et al. (2008) NeuroImage, 39(1):336-347
+Hua et al. (2008) NeuroImage, 39(1):336-347
 [pubmed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724595/)
 
 ## Installation
@@ -46,8 +46,7 @@ library(ggsegJHU)
 ``` r
 library(ggseg)
 
-ggseg(atlas = jhu, mapping = aes(fill = region)) +
-  scale_fill_brain("jhu", package = "ggsegJHU") +
+plot(jhu) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 7)) +
   guides(fill = guide_legend(ncol = 2))

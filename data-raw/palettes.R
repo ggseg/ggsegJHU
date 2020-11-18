@@ -34,6 +34,8 @@ jhu_n %>%
 
 
 jhu <- jhu_n
+jhu <- as_brain_atlas(jhu)
+jhu$palette <- brain_pals$jhu
 usethis::use_data(jhu,
                   internal = FALSE,
                   overwrite = TRUE,

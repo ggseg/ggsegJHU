@@ -10,7 +10,8 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   fig.width = 6,
-  out.width = "100%"
+  out.width = "100%",
+  fig.retina = 3
 )
 devtools::load_all(".")
 ```
@@ -51,8 +52,7 @@ library(ggsegJHU)
 ```{r, fig.height=6}
 library(ggseg)
 
-ggseg(atlas = jhu, mapping = aes(fill = region)) +
-  scale_fill_brain("jhu", package = "ggsegJHU") +
+plot(jhu) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 7)) +
   guides(fill = guide_legend(ncol = 2))
