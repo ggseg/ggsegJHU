@@ -11,6 +11,8 @@ status](https://travis-ci.org/LCBC-UiO/ggsegJHU.svg?branch=master)](https://trav
 status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegJHU?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegJHU)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegJHU/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegJHU?branch=master)
+[![R build
+status](https://github.com/LCBC-UiO/ggsegJHU/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegJHU/actions)
 <!-- badges: end -->
 
 Contains data for ggseg and ggseg3d for the JHU white matter
@@ -21,14 +23,8 @@ Hua et al. (2008) NeuroImage, 39(1):336-347
 
 ## Installation
 
-You can install the released version of ggsegJHU from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("ggsegJHU")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -45,6 +41,7 @@ library(ggsegJHU)
 
 ``` r
 library(ggseg)
+#> Loading required package: ggplot2
 
 plot(jhu) +
   theme(legend.position = "bottom",
@@ -56,6 +53,7 @@ plot(jhu) +
 
 ``` r
 library(ggseg3d)
+library(dplyr)
 
 ggseg3d(atlas = jhu_3d) %>% 
   add_glassbrain("left") %>% 
