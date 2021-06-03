@@ -1,6 +1,6 @@
 Package: ggsegJHU
 Title: JHU datasets for the ggseg-plotting tool
-Version: 1.0.01
+Version: 1.0.1.001
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),

@@ -1,14 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegJHU
+# ggsegJHU <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/LCBC-UiO/ggsegJHU.svg?branch=master)](https://travis-ci.org/LCBC-UiO/ggsegJHU)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegJHU?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegJHU)
+[![DOI](https://zenodo.org/badge/250280074.svg)](https://zenodo.org/badge/latestdoi/250280074)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegJHU/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegJHU?branch=master)
 [![R build
@@ -22,6 +19,19 @@ Hua et al. (2008) NeuroImage, 39(1):336-347
 [pubmed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724595/)
 
 ## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegJHU')
+```
 
 You can install the development version from
 [GitHub](https://github.com/) with:
@@ -41,7 +51,7 @@ library(ggsegJHU)
 
 ``` r
 library(ggseg)
-#> Loading required package: ggplot2
+library(ggplot2)
 
 plot(jhu) +
   theme(legend.position = "bottom",
@@ -49,7 +59,7 @@ plot(jhu) +
   guides(fill = guide_legend(ncol = 2))
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ``` r
 library(ggseg3d)

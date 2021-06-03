@@ -15,11 +15,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ggsegJHU
+# ggsegJHU <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/LCBC-UiO/ggsegJHU.svg?branch=master)](https://travis-ci.org/LCBC-UiO/ggsegJHU)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegJHU?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegJHU)
+[![DOI](https://zenodo.org/badge/250280074.svg)](https://zenodo.org/badge/latestdoi/250280074)
 [![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegJHU/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegJHU?branch=master)
 [![R build status](https://github.com/LCBC-UiO/ggsegJHU/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegJHU/actions)
 <!-- badges: end -->
@@ -29,6 +28,17 @@ Contains data for ggseg and ggseg3d for the JHU white matter segmentation.
 Hua et al. (2008) NeuroImage, 39(1):336-347 [pubmed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724595/)
 
 ## Installation
+We recommend installing the ggseg-atlases through the ggseg [r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r eval = FALSE}
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegJHU')
+```
 
 You can install the development version from [GitHub](https://github.com/) with:
 
@@ -45,6 +55,7 @@ library(ggsegJHU)
 
 ```{r, fig.height=6}
 library(ggseg)
+library(ggplot2)
 
 plot(jhu) +
   theme(legend.position = "bottom",
